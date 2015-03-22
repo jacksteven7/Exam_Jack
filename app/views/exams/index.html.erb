@@ -2,27 +2,12 @@
 
 <h1>Listing Exams</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
     <% @exams.each do |exam| %>
-      <tr>
-        <td><%= exam.title %></td>
-        <td><%= exam.description %></td>
-        <td><%= link_to 'Show', exam %></td>
-        <td><%= link_to 'Edit', edit_exam_path(exam) %></td>
-        <td><%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <h2><%= link_to exam.title, exam%></h2>
+      <p><%= exam.description %></p>
     <% end %>
-  </tbody>
-</table>
+
 
 <br>
 
