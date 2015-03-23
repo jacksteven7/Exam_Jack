@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :exams
+  get 'questions/_question'
+
+  resources :exams do
+    resources :questions
+  end
+
 
   root "exams#index"
 end

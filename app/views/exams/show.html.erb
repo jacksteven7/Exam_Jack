@@ -2,14 +2,16 @@
 
 <h1>
   <%= @exam.title %>
+   <div class="btn btn-group">
+	<%= link_to 'Destroy', @exam, method: :delete, data: { confirm: 'Are you sure?' } , :class => "btn btn-xs btn-primary" %>
+	<%= link_to 'Edit', edit_exam_path(@exam) , :class => "btn btn-xs btn-primary" %>
+	<%= link_to 'Back', exams_path , :class => "btn btn-xs btn-primary" %>
+	</div>
+
 </h1>
 
 <p>
   <%= @exam.description %>
 </p>
 
-<div class="btn btn-group">
-	<%= link_to 'Destroy', @exam, method: :delete, data: { confirm: 'Are you sure?' } , :class => "btn btn-primary" %>
-	<%= link_to 'Edit', edit_exam_path(@exam) , :class => "btn btn-primary" %>
-	<%= link_to 'Back', exams_path , :class => "btn btn-primary" %>
-</div>
+<%= render 'questions/form' %>

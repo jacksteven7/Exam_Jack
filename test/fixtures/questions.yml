@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyText
+  type: 1
+  exam_id: 
+
+two:
+  title: MyText
+  type: 1
+  exam_id: 
