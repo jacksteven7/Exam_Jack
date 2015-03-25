@@ -6,6 +6,6 @@ class QuestionsController < ApplicationController
   end
   def show
   	@exam = Exam.find(params.require(:exam_id))
-  	@question = @exam.questions.create(params.require(:question).permit(:title,:type))
+  	@question = @exam.questions.where(id: params.require(:id))
   end
 end
