@@ -20,7 +20,16 @@
 	width: 80%;
 	margin: auto;
 	font-family: sans-serif; 
-	h1{
+	h1,h2,h3{
 	 color: #337ab7;
+	}
+	img {
+		-webkit-transition: all .3s ease-out;
+	    -moz-transition: all .3s ease-out;
+	    -o-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+		&:hover {
+			transform: scale(1.275);
+		}
 	}
 }
