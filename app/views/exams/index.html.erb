@@ -1,8 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Exams</h1>
-
-
     <% @exams.each do |exam| %>
       <h2><%= link_to exam.title, exam%></h2>
       <p><%= exam.description %></p>

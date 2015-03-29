@@ -1,5 +1,7 @@
 class Question < ActiveRecord::Base
-  validates_presence_of :title,:type
+  has_many :answers
   belongs_to :exam
+
+  validates_presence_of :title,:type
   self.inheritance_column = nil
 end
