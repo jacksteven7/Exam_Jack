@@ -2,10 +2,10 @@
 
 one:
   title: MyText
-  correct: 
+  correct: false
   question_id: 
 
 two:
   title: MyText
-  correct: 
+  correct: false
   question_id: 

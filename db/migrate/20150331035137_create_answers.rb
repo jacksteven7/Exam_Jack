@@ -2,7 +2,7 @@ class CreateAnswers < ActiveRecord::Migration
   def change
     create_table :answers do |t|
       t.text :title
-      t.boolan :correct
+      t.boolean :correct
       t.references :question, index: true
 
       t.timestamps null: false
