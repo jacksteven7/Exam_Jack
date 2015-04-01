@@ -1,0 +1,7 @@
+<%= simple_form_for([@exam,@question,@question.answers.build]) do |f| %>
+  <div class="form-group">
+      <%= f.text_area :title , :class => "form-control", placeholder: "Formulate Your Answer"  %> <br>
+      <%= f.submit nil, :class => "btn btn-primary" %>
+      <%= link_to "Cancel" , @exam , :class => "btn btn-primary" %>
+  </div>
+<% end %>

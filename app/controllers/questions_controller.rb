@@ -32,4 +32,3 @@ class QuestionsController < ApplicationController
     redirect_to @exam 
   end
 end
-	
