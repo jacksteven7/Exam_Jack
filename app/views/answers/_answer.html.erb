@@ -1,1 +1,11 @@
-<p><%= answer.title %></p>
+<% if answer.title %>
+	<tr>
+		<td width="80%" ><%=  answer.title.truncate(70) %></td>
+		<% if answer.correct %>
+			<td width="10%" >True</td>
+		<% else %>
+			<td width="10%" >False</td>
+		<% end %>
+		<td width="10%" ><%= link_to image_tag("remove.png",:width => "20", :height => "20", :border => 0, :onmouseover => "Remove"),exam_question_answer_path(answer.question.exam,answer.question,answer),  method: :delete, data: { confirm: 'Are you sure?' }%></td>
+	</tr>
+<% end %>
