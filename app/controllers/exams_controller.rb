@@ -1,5 +1,5 @@
 class ExamsController < ApplicationController
-  before_action :set_exam, only: [:show, :edit, :update, :destroy]
+  before_action :set_exam, only: [:show, :edit, :update, :destroy, :preview]
 
   # GET /exams
   # GET /exams.json
@@ -59,6 +59,10 @@ class ExamsController < ApplicationController
       format.html { redirect_to exams_url, notice: 'Exam was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def preview
+    
   end
 
   private

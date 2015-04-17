@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
     <% @exams.each do |exam| %>
-      <h2><%= link_to exam.title, exam%></h2>
+      <h2><%= link_to exam.title, exam%> 
+      	<%= link_to 'Preview', preview_exam_path(exam) , method: :patch, :class => "btn btn-xs btn-primary" %> 
+      </h2>
       <p><%= exam.description %></p>
     <% end %>
 
 
 <br>
 
-<%= link_to 'New Exam', new_exam_path %>
+<%= link_to 'New Exam', new_exam_path , :class => "btn btn-primary" %>
