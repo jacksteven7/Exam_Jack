@@ -14,13 +14,16 @@
 
 <% @exam.questions.each_with_index do |question , index|  %>
 	<h3><%= index+1  %>. <%= question.title  %></h3>
-	<% question.answers.each do |answer| %>
-		</p>
-			<% if question.type == 1 %>
-				_ <%= answer.title %>
-			<% else %>
-				O <%= answer.title %>
-			<% end %>	
-		</p>
-	<% end %>
+	<div style="padding-left: 0.7cm;">
+		<% question.answers.each do |answer| %>
+			</p>
+				<% if question.type == 1 %>
+					<%= check_box_tag question.id %>
+					<%= answer.title %>
+				<% else %>
+					<%= radio_button_tag question.id, true %> <%= answer.title %>
+				<% end %>	
+			</p>
+		<% end %>
+	</div>
 <% end %>
