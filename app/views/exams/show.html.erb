@@ -14,10 +14,14 @@
   <%= @exam.description %>
 </p>
 
-<%= render 'questions/form' %>
 
-<h2>Questions</h2>
+
+<h3>Questions
+	<%= link_to image_tag("add.png", size: "30x30", alt: "Add Question"), new_exam_question_path(@exam), :class => "submit_button", :onclick => 'return openPopup(this);' %>
+</h3>
+
 <br>
 <table class="table">
 	<%= render @exam.questions %>
 </table>
+

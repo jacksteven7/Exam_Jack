@@ -15,3 +15,23 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+function openPopup(link)
+{
+    window.open(link.href,'exam_dialog','toolbar=no,location=no,menubar=no,scrollbars=yes,resizable=no, height=300, width=600, left=400, top=200');
+    return false;
+}
+
+
+function closePopup()
+{
+	window.close();
+}
+
+function closePopupDelay()
+{	
+	setTimeout(function(){ 
+		alert("2")
+       window.close();
+    }, 2000);  
+    alert("1")
+}
