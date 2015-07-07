@@ -16,9 +16,10 @@
 	</div>
 </h3>
 
-<%= render 'answers/form' %>
 
-<h3>Answers</h3>
+<h3>Answers
+	<%= link_to image_tag("add.png", size: "30x30", alt: "Add Question"), new_exam_question_answer_path(@exam,@question), :class => "submit_button", :onclick => 'return openPopup(this);' %>
+</h3>
 <br>
 <table class="table">
 	<tr> 

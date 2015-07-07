@@ -3,7 +3,12 @@ class AnswersController < ApplicationController
     @exam = Exam.find(params.require(:exam_id))
     @question = @exam.questions.find_by(id: params.require(:question_id))
     @answer = @question.answers.create(params.require(:answer).permit(:title,:correct))
-    redirect_to exam_question_path(@exam,@question)
+    redirect_to redirect_path
+  end
+  def new
+    @exam = Exam.find(params.require(:exam_id))
+    @question = @exam.questions.find_by(id: params.require(:question_id))
+    @answer = @question.answers.build
   end
   def show
     @exam = Exam.find(params.require(:exam_id))

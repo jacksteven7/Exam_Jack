@@ -5,6 +5,7 @@ before_action :find_exam
   	@exam = Exam.find(params.require(:exam_id))
   	if !params.require(:question).permit(:type).empty?
   		@question = @exam.questions.create(params.require(:question).permit(:title,:type))
+      redirect_to redirect_path
   	else 
   		redirect_to redirect_path
   	end
